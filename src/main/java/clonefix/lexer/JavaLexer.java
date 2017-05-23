@@ -15,13 +15,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package clearfix.lexer;
+package clonefix.lexer;
 
 import com.intellij.pom.java.LanguageLevel;
 import com.intellij.psi.JavaTokenType;
 import com.intellij.psi.impl.source.tree.JavaDocElementType;
 import com.intellij.psi.tree.IElementType;
-import com.intellij.lexer.FlexLexer;
 
 @SuppressWarnings({"ALL"})
 
@@ -30,7 +29,7 @@ import com.intellij.lexer.FlexLexer;
  * <a href="http://www.jflex.de/">JFlex</a> 1.6.1
  * from the specification file <tt>/home/bodrik/diploma/examples/src/main/java/clonefix/examples/_JavaLexer.flex</tt>
  */
-class _JavaLexer {
+class JavaLexer {
 
   /** This character denotes the end of file */
   public static final int YYEOF = -1;
@@ -785,7 +784,7 @@ class _JavaLexer {
   private boolean myAssertKeyword;
   private boolean myEnumKeyword;
 
-  public _JavaLexer(LanguageLevel level) {
+  public JavaLexer(LanguageLevel level) {
     this((java.io.Reader)null);
     myAssertKeyword = level.isAtLeast(LanguageLevel.JDK_1_4);
     myEnumKeyword = level.isAtLeast(LanguageLevel.JDK_1_5);
@@ -802,7 +801,7 @@ class _JavaLexer {
    *
    * @param   in  the java.io.Reader to read input from.
    */
-  _JavaLexer(java.io.Reader in) {
+  JavaLexer(java.io.Reader in) {
     this.zzReader = in;
   }
 
